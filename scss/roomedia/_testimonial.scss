@@ -1,0 +1,230 @@
+/*
+-----------------------------------------------------------------------
+	Testimonial CSS
+-----------------------------------------------------------------------
+*/
+.testimonial-area {
+	&.testimonial-default-area {
+		padding: 63px 0 148px;
+		@media #{$lg-device} {
+			padding: 64px 0 90px;
+		}
+		@media #{$xs-device} {
+			padding: 45px 0 65px;
+		}
+		.section-title {
+			text-transform: uppercase;
+			@media #{$lg-device} {
+				margin-bottom: 60px;
+			}
+			.title {
+				margin-bottom: 129px;
+				@media #{$lg-device} {
+					margin-bottom: 70px;
+				}
+			}
+			.icon {
+		    display: inline-block;
+		    min-width: 80px;
+				position: relative;
+				.icon-img {
+					margin: 0;
+				}
+				.icon-shape {
+			    position: absolute;
+			    right: -37%;
+			    top: -89%;
+			    z-index: -1;
+				}
+			}
+		}
+		.testimonial-content-area {
+			padding-left: 85px;
+			@media #{$lg-device} {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+.testimonial-single {
+	position: relative;
+	.client-thumb {
+		border-radius: 50%;
+		box-shadow: 0px 10px 40px 0px rgba(171, 181, 189, 0.35);
+		display: inline-block;
+		left: 50%;
+    position: absolute;
+    top: -55px;
+    transform: translateX(-50%);
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	.client-content {
+		margin-bottom: 46px;
+		p {
+			color: $black;
+			font-family: $font-current-theme1;
+			font-size: 24px;
+			font-weight: $font-weight-medium;
+			line-height: 40px;
+			@media #{$lg-device} {
+				font-size: 20px;
+			}
+			@media #{$md-device} {
+				font-size: 18px;
+			}
+			@media #{$xxs-device} {
+				font-size: 16px;
+			}
+		}
+	}
+
+	.client-info {
+		.name {
+			color: $theme-color;
+			font-size: 20px;
+			font-weight: $font-weight-semi-bold;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+		.designation {
+			color: #aba5a5;
+		}
+	}
+}
+
+.testimonial-slider-container {
+	.swiper-button-next,
+	.swiper-button-prev {
+		color: #aba5a5;
+		display: inline-block;
+		font-size: 30px;
+		left: 0;
+		margin-top: 53px;
+		position: relative;
+		right: auto;
+		@include transition(.3s);
+		&:after {
+			display: none;
+		}
+		&:hover {
+			color: $black-0e;
+		}
+	}
+	.swiper-button-next {
+		margin-left: 35px;
+	}
+}
+
+.testimonial-item {
+	border: 1px solid #c9d0d5;
+	border-radius: 5px;
+	padding: 47px 28px 48px 39px;
+	position: relative;
+	@include transition(.3s);
+	@media #{$xxs-device} {
+		padding: 35px 15px 40px;
+	}
+	&:before {
+		background-color: $theme-color;
+		border-radius: 5px 5px 0 0;
+		content: "";
+		height: 3px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		@include transition(.3s);
+	}
+
+	.client-content {
+		margin-bottom: 36px;
+		position: relative;
+		z-index: 1;
+		p {
+			font-size: 16px;
+		}
+	}
+
+	.client-info {
+		align-items: center;
+		display: flex;
+		position: relative;
+		z-index: 1;
+		.thumb {
+			border-radius: 50%;
+			margin-right: 20px;
+			img {
+				border-radius: 50%;
+			}
+		}
+		.desc {
+
+		}
+		.name {
+			color: $black-0e;
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+		.designation {
+			color: #aba5a5;
+			font-size: 14px;
+			line-height: 1;
+		}
+		.icon-quote {
+	    position: absolute;
+	    right: 0;
+	    transform: translateY(-50%);
+	    top: 50%;
+			img {
+				width: auto;
+				@media #{$xxs-device} {
+					display: none;
+				}
+			}
+		}
+	}
+	&:hover {
+		border-color: $theme-color;
+	}
+}
+
+.testimonial-items2-slider-container {
+	@media #{$xs-device} {}
+	.swiper-pagination {
+		bottom: 0;
+		margin-top: 82px;
+		position: relative;
+		@media #{$lg-device} {
+			margin-top: 60px;
+		}
+		@media #{$xs-device} {
+			margin-top: 40px;
+		}
+		.swiper-pagination-bullet {
+			border: 1px solid #aba5a5;
+			background-color: transparent;
+			height: 10px;
+			margin: 0 12.5px;
+			opacity: 1;
+			width: 10px;
+			@include transition(.3s);
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			&:hover {
+				border-color: $theme-color;
+			}
+			&-active {
+				background-color: $theme-color;
+				border-color: $theme-color;
+			}
+		}
+	}
+}

@@ -1,0 +1,151 @@
+/*
+-----------------------------------------------------------------------
+	Team CSS
+-----------------------------------------------------------------------
+*/
+.team-area {
+	padding: 136px 0 251px;
+  @media #{$lg-device} {
+  	padding: 90px 0 150px;
+  }
+  @media #{$md-device} {
+  	padding: 90px 0 120px;
+  }
+  @media #{$xs-device} {
+  	padding: 70px 0 90px;
+  }
+  @media #{$xxs-device} {
+  	padding: 70px 0 40px;
+  }
+	.row-gutter-70 {
+	  margin-right: -35px;
+	  margin-left: -35px;
+	  @media #{$lg-device} {
+	  	margin-left: -15px;
+	  	margin-right: -15px;
+	  }
+	  [class*=col-] {
+	    margin: 0;
+	    padding-left: 35px;
+	    padding-right: 35px;
+	    @media #{$lg-device} {
+	    	padding-left: 15px;
+	    	padding-right: 15px;
+	    }
+	  }
+	}
+	.section-title {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 77px;
+		@media #{$lg-device} {
+			margin-bottom: 65px;
+		}
+		@media #{$xxs-device} {
+			display: block;
+		}
+		.title {
+			margin-bottom: 0;
+			@media #{$xxs-device} {
+				margin-bottom: 15px;
+			}
+		}
+		.btn-page-link{
+			color: $black;
+			font-size: 14px;
+			font-weight: 500;
+			letter-spacing: .25px;
+			margin-bottom: 4px;
+			text-transform: uppercase;
+			i {
+		    font-size: 20px;
+		    position: relative;
+		    top: 3px;
+			}
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+.team-member {
+	margin-bottom: 30px;
+	.thumb {
+		border-radius: 5px;
+		overflow: hidden;
+		position: relative;
+		img {
+			border-radius: 5px;
+			width: 100%;
+			@include transition(all 0.8s ease-in-out);
+		}
+		.member-icons {
+			background-color: $white;
+			border-radius: 5px;
+			bottom: -66px;
+			line-height: 1;
+			padding: 11px 17px;
+			position: absolute;
+			right: 12px;
+			@include transition(.4s);
+			a {
+				color: $black-666;
+				display: inline-block;
+				font-size: 16px;
+				padding: 0 7.52px;
+				&:hover {
+					color: $theme-color;
+				}
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+	.content {
+		padding: 24px 0 0;
+		.member-info {
+			.name {
+				color: $black;
+				font-size: 24px;
+				font-weight: $font-weight-semi-bold;
+				letter-spacing: 0;
+				margin-bottom: 9px;
+				@include transition(.3s);
+				a {
+					color: $black;
+				}
+			}
+			.designation {
+				color: $black-666;
+				font-size: 14px;
+				font-weight: $font-weight-normal;
+				margin-bottom: 0;
+			}
+		}
+	}
+	&:hover {
+		.thumb {
+			img {
+				@include scale(1.15);
+			}
+			.member-icons {
+				bottom: 11px;
+			}
+		}
+		.content {
+			.member-info {
+				.name {
+					a {
+						color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+}

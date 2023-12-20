@@ -1,0 +1,40 @@
+/*
+-----------------------------------------------------------------------
+	Funfact CSS
+-----------------------------------------------------------------------
+*/
+.funfact-area {
+	padding: 15px 0 0;
+	@media #{$md-device} {
+		padding-top: 15px;
+	}
+	@media #{$sm-device} {
+		padding-top: 0;
+	}
+}
+
+.funfact-item {
+	position: relative;
+	text-align: center;
+	@media #{$md-device} {
+		margin-bottom: 60px;
+	}
+	.number {
+		h2 {
+			color: $theme-color;
+			font-size: 44px;
+			font-weight: $font-weight-semi-bold;
+			margin-bottom: 10px;
+			@media #{$xxs-device} {
+				font-size: 38px;
+			}
+		}
+	}
+	.title {
+		color: $black-0e;
+		font-size: 18px;
+		@media #{$xxs-device} {
+			font-size: 14px;
+		}
+	}
+}

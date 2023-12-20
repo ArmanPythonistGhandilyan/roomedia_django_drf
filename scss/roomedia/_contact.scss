@@ -1,0 +1,389 @@
+/*
+-----------------------------------------------------------------------
+	Contact CSS
+-----------------------------------------------------------------------
+*/
+.contact-area {
+	padding: 117px 0 220px;
+	position: relative;
+	@media #{$lg-device} {
+		padding: 80px 0 150px;
+	}
+	@media #{$md-device} {
+		padding: 80px 0 100px;
+	}
+	@media #{$sm-device} {
+		padding: 70px 0 90px;
+	}
+	@media #{$xs-device} {
+		padding: 70px 0 30px;
+	}
+	.title {
+		color: $black;
+		font-size: 30px;
+		font-weight: $font-weight-semi-bold;
+		letter-spacing: -.25px;
+		line-height: 40px;
+		margin-bottom: 81px;
+		@media #{$sm-device} {
+			font-size: 20px;
+			line-height: 34px;
+			margin-bottom: 50px;
+		}
+	}
+	.contact-form {
+		.contact-form-wrapper {
+			background-color: #efefef;
+			border-radius: 10px;
+			padding: 101px 0 113px;
+			@media #{$lg-device} {
+				padding: 80px 0 90px;
+			}
+			@media #{$md-device} {
+				padding: 70px 30px 80px;
+			}
+			@media #{$sm-device} {
+				padding: 50px 30px 60px;
+			}
+			.section-title {
+				margin-bottom: 45px;
+				.title {
+					font-weight: $font-weight-semi-bold;
+					margin-bottom: 0;
+				}
+			}
+			.row-gutter-20 {
+			  margin-right: -10px;
+			  margin-left: -10px;
+			  [class*=col-] {
+			    margin: 0;
+			    padding-left: 10px;
+			    padding-right: 10px;
+			  }
+			}
+			.form-group {
+				margin-bottom: 20px;
+				.form-control {
+					border: 1px solid $white;
+					border-radius: 2px;
+					color: $black;
+					font-size: 16px;
+					height: 45px;
+					padding: 9px 18px;
+					@include placeholder {
+		        color: $black-999;
+		        font-size: 16px;
+		      }
+		      &:focus {
+		        border: 1px solid $gray-ccc;
+		        box-shadow: none;
+		        outline: none;
+		      }
+				}
+				textarea {
+		      border: 1px solid $white;
+		      border-radius: 2px;
+		      font-size: 16px;
+		      min-height: 200px;
+		      padding: 9px 18px;
+		      width: 100%;
+		      @include placeholder {
+		        color: $black-999;
+		        font-size: 16px;
+		      }
+		      &:focus {
+		        border: 1px solid $gray-ccc;
+		        box-shadow: none;
+		        outline: none;
+		      }
+		    }
+		    .btn-theme {
+		    	font-size: 16px;
+		    	font-weight: $font-weight-semi-bold;
+		    	letter-spacing: -.15px;
+		    	margin-top: 44px;
+		    	padding: 11px 30.21px;
+		    }
+			}
+		}
+	}
+}
+
+.contact-info-style {
+	&.contact-info-content {
+		border-bottom: 1px solid #e1e1e1;
+		padding: 114px 0 69px;
+		@media #{$lg-device} {
+			padding: 90px 0 69px;
+		}
+		@media #{$md-device} {
+			padding: 90px 0 88px;
+		}
+		@media #{$sm-device} {
+			padding: 70px 0 30px;
+		}
+	}
+	.contact-info-item {
+		align-items: center;
+		display: flex;
+		margin-top: 2px;
+		@media #{$md-device} {
+			justify-content: center;
+		}
+		@media #{$sm-device} {
+			margin-bottom: 40px;
+		}
+		@media #{$xs-device} {
+			justify-content: normal;
+		}
+		.icon {
+			color: $theme-color;
+			font-size: 34px;
+			line-height: 1;
+			margin-right: 19px;
+			@media #{$lg-device} {
+				margin-right: 18px;
+			}
+		}
+		h4 {
+			font-size: 16px;
+			font-weight: $font-weight-semi-bold;
+			line-height: 1;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			@media #{$xxs-device} {
+				font-size: 14px;
+			}
+		}
+		p {
+			line-height: 1;
+			margin-bottom: 0;
+			@media #{$lg-device} {
+				font-size: 14px;
+			}
+		}
+		&.item-style-two {
+			align-items: center;
+			display: flex;
+			margin-top: 0;
+			@media #{$md-device} {
+				justify-content: center;
+				margin-bottom: 40px;
+			}
+			@media #{$xs-device} {
+				justify-content: normal;
+				margin-bottom: 32px;
+			}
+			.icon {
+				background-color: $theme-color;
+				border-radius: 3px;
+				color: $white;
+				font-size: 30px;
+				height: 46px;
+				line-height: 51px;
+				margin-right: 20px;
+				text-align: center;
+				width: 46px;
+			}
+			.content {
+				align-items: center;
+				display: flex;
+				@media #{$xs-device} {
+					display: flex;
+					align-items: unset;
+					justify-content: unset;
+					flex-flow: wrap column
+				}
+			}
+			h4 {
+				font-size: 16px;
+				font-weight: $font-weight-semi-bold;
+				letter-spacing: .147px;
+				line-height: 24px;
+				margin-bottom: 0;
+				margin-right: 68px;
+				@media #{$lg-device} {
+					margin-right: 46px;
+				}
+				@media #{$xs-device} {
+					margin-bottom: 6px;
+					br {
+						display: none;
+					}
+				}
+				@media #{$xxs-device} {
+					font-size: 14px;
+				}
+			}
+			h3 {
+				color: $theme-color;
+				font-size: 32px;
+				margin-bottom: 0;
+				@media #{$lg-device} {
+					font-size: 26px;
+				}
+			}
+		}
+	}
+}
+
+.contact-info-content-style {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 123px;
+	@media #{$lg-device} {
+		padding-bottom: 95px;
+	}
+	@media #{$md-device} {
+		margin: 0 -15px;
+		padding-bottom: 85px;
+	}
+	@media #{$sm-device} {
+		display: inline-block;
+		padding-bottom: 20px;
+		width: 100%;
+	}
+	@media #{$xxs-device} {
+		margin: 0;
+	}
+	.info-item {
+		max-width: 277px;
+		min-width: 277px;
+		@media #{$md-device} {
+			min-width: auto;
+			padding: 0 15px;
+			width: 33.3333333333%;
+		}
+		@media #{$sm-device} {
+			float: left;
+			margin-bottom: 50px;
+			width: 50%;
+		}
+		@media #{$xxs-device} {
+			max-width: none;
+			width: 100%;
+		}
+		.info-title	{
+			align-items: center;
+			border-bottom: 1px solid #d3d6da;
+			display: flex;
+			justify-content: space-between;
+			line-height: 1;
+			margin-bottom: 23px;
+			padding-bottom: 10px;
+			h4 {
+				color: $black;
+				font-family: $font-current-theme1;
+				font-size: 18px;
+				font-weight: $font-weight-semi-bold;
+				letter-spacing: 0;
+				line-height: 1;
+				margin-bottom: 0;
+				text-transform: uppercase;
+				@media #{$xs-device} {
+					font-size: 16px;
+				}
+			}
+			.icon {
+				color: $black-999;
+				font-size: 20px;
+			}
+			&.info-item2 {
+				h4 {
+					position: relative;
+					top: -2px;
+				}
+				.icon {
+					font-size: 24px;
+			    position: relative;
+			    top: -4px;
+				}
+			}
+		}
+		.info-content {
+			font-size: 16px;
+			letter-spacing: 0;
+			line-height: 30px;
+			@media #{$md-device} {
+				font-size: 14px;
+				line-height: 26px;
+			}
+			p {
+				color: $black;
+				margin-bottom: 0;
+			}
+			a {
+				color: $black;
+				display: inline-block;
+				position: relative;				
+				@media #{$xxs-device} {
+					display: block;
+				}
+				&:after {
+					background-color: #535353;
+			    bottom: 5px;
+			    content: "";
+			    height: 1px;
+			    right: 0;
+			    position: absolute;
+			    width: 0;
+			    @include transition(.3s);			    
+					@media #{$xxs-device} {
+						display: none;
+					}
+				}
+				&:hover {
+					color: $black;
+					@media #{$xxs-device} {
+						color: $theme-color;
+					}
+					&:after {
+						left: 0;
+						width: 100%;
+					}
+				}
+			}
+		}
+		&:last-child {
+			@media #{$md-device} {
+				
+			}
+		}
+	}
+}
+
+.contact-form {
+	.section-title {
+		margin-bottom: 70px;
+		@media #{$lg-device} {
+			margin-bottom: 60px;
+		}
+	}
+	.contact-form-wrapper {
+		background-color: $white;
+		padding: 45px 50px 61px;
+		@media #{$xxs-device} {
+			padding: 35px 25px 45px;
+		}
+	}
+}
+
+.contact-map-area {
+	height: 500px;
+	@media #{$xxl-device} {
+		height: 420px;
+	}
+	@media #{$lg-device} {
+		height: 380px;
+	}
+	@media #{$md-device} {
+		height: 320px;
+	}
+	@media #{$sm-device} {
+		height: 300px;
+	}
+	iframe {
+	  height: 100%;
+	  width: 100%;
+	}
+}

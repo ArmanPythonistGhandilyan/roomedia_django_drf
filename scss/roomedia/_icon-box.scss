@@ -1,0 +1,172 @@
+/*
+-----------------------------------------------------------------------
+  Icon Box CSS
+-----------------------------------------------------------------------
+*/
+.icon-box-style1 {
+  .icon-box-item {
+    background-color: $white;
+    border-bottom: 1px solid #ececec;
+    border-right: 1px solid #ececec;
+    overflow: hidden;
+    padding: 54px 55px 56px 50px;
+    position: relative;
+    width: 33.333333%;
+    z-index: 1;
+    @include transition(.4s);
+    @media #{$lg-device} {
+      padding: 44px 35px 46px 30px;
+    }
+    @media #{$md-device} {
+      width: 100%;
+      border-right: none;
+    }
+    &:last-child {
+      border-right: none;
+    }
+    &:after {
+      bottom: 0;
+      content: "";
+      height: 0;
+      left: 0;
+      position: absolute;
+      top: auto;
+      width: 100%;
+      z-index: -1;
+      @include transition(.4s);
+    }
+    .icon-box {
+      margin-bottom: 37px;
+      position: relative;
+      .icon {
+        color: $theme-color;
+        font-size: 60px;
+        line-height: 1;
+      }
+      .icon-img {
+        width: 70px;
+        @include transition(.1s);
+      }
+    }
+    .content {
+      h4 {
+        font-size: 20px;
+        font-weight: $font-weight-semi-bold;
+        margin-bottom: 24px;
+        @include transition(.4s);
+        @media #{$lg-device} {
+          font-size: 18px;
+        }
+        a {
+          color: $black-0e;
+          @include transition(.4s);
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+      p {
+        @include transition(.4s);
+      }
+      .btn-theme {
+        margin-top: 10px;
+      }
+    }
+    .icon-box-number {
+      color: $black-0e;
+      font-family: $font-current-theme1;
+      font-weight: $font-weight-bold;
+      font-size: 16px;
+      position: absolute;
+      right: 58px;
+      top: 33px;
+      @include transition(.4s);
+    }
+    &:hover {
+      &:after {
+        background-color: $theme-color;
+        bottom: auto;
+        height: 100%;
+        top: 0;
+      }
+      .icon-box {
+        .icon-img {
+          filter: invert(1) brightness(100);
+        }
+      }
+      .content {
+        h4 {
+          a {
+            color: $white;
+          }
+        }
+        p {
+          color: $white;
+        }
+      }
+      .icon-box-number {
+        color: $white;
+      }
+    }
+  } 
+}
+
+.icon-box-style2 {
+  .icon-box-item {
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    padding: 96px 39px 50px 39px;
+    position: relative;
+    @include transition(.3s);
+    .icon-box {
+      margin-bottom: 48px;
+      position: relative;
+      .icon {
+        color: $theme-color;
+        font-size: 60px;
+        line-height: 1;
+      }
+      .icon-img {
+        max-width: none;
+        min-height: 60px;
+        @include transition(.3s);
+      }
+    }
+    .content {
+      h4 {
+        color: $black-0e;
+        font-size: 20px;
+        font-weight: $font-weight-semi-bold;
+        margin-bottom: 24px;
+        @include transition(.3s);
+        @media #{$lg-device} {
+          font-size: 18px;
+        }
+      }
+      p {
+        @include transition(.3s);
+      }
+      .btn-theme {
+        margin-top: 10px;
+      }
+    }
+    &:hover {
+      border-color: $theme-color;
+      .content {
+        h4 {
+          color: $theme-color;
+        }
+      }
+    }
+  } 
+}
+
+.icon-box-list {
+  display: flex;
+  flex-wrap: wrap;
+  &:last-child {
+    .icon-box-item {
+      border-bottom: none;
+    }
+  }
+}

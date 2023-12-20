@@ -1,0 +1,295 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+      {% block content %}
+      
+      <main class="main-content site-wrapper-reveal">
+        <!--== Start Page Title Area ==-->
+        <section class="page-title-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="page-title-content text-center pb-sm-50 pb-80">
+                  <h2 class="title">Portfolio</h2>
+                  <div class="bread-crumbs pb-1"><a href="{% url 'index' %}">Home<span
+                        class="breadcrumb-sep">/</span></a><span class="active">Portfolio Grid 2 Column</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--== End Page Title Area ==-->
+
+        <!--== Start Portfolio Area ==-->
+        <section class="portfolio-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-title text-center">
+                  <div class="portfolio-filter-menu mb-0">
+                    <button class="active" data-filter="*">All ProjectS</button>
+                    <button data-filter=".localSeo">Local SEO</button>
+                    <button data-filter=".ecommerceSeo">Ecommerce SEO</button>
+                    <button data-filter=".socialMedia"> Social Media</button>
+                    <button data-filter=".digitalMarketing">Digital Marketing</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row portfolio-grid gutter-50">
+              <div class="col-md-6 col-sm-12 portfolio-item">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/01.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">Fashion Brand StyleRevolver</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Local SEO</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 portfolio-item localSeo">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/02.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">Barclays Capital Group</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Local SEO</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 portfolio-item localSeo">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/03.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">Eco-Friendly Brand</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Local SEO</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 portfolio-item localSeo">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/04.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">Artofenough Company</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Local SEO</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 portfolio-item ecommerceSeo">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/05.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">Business Card For Bicker</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Ecommerce SEO</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 portfolio-item ecommerceSeo">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/06.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">Designer Brand For Northern</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Ecommerce SEO</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 portfolio-item ecommerceSeo">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/07.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">Branding For Avrio Vantage</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Ecommerce SEO</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 portfolio-item socialMedia">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/08.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">High Fashion Fairvine</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Social Media</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 portfolio-item socialMedia">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/09.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">Branding For Bottle</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Social Media</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-sm-12 portfolio-item digitalMarketing">
+                <div class="inner-content">
+                  <div class="thumb">
+                    <a href="{% url 'portfolio_details' %}"> <img src="{% static 'assets/img/portfolio/10.jpg' %}"
+                        alt="Roomedia-Portfolio" /></a>
+                  </div>
+                  <div class="portfolio-info">
+                    <h3 class="title"><a href="{% url 'portfolio_details' %}">Barclays Capital Group</a></h3>
+                    <a href="{% url 'portfolio_details' %}" class="category">Digital Marketing</a>
+                    <a class="btn-icon" href="{% url 'portfolio_details' %}"><i class="lnr lnr-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--== End Portfolio Area ==-->
+      </main>
+
+      <!--== Start Footer Area Wrapper ==-->
+      <footer class="footer-area reveal-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3 col-xl-3">
+              <div class="widget-item mt-0">
+                <div class="about-widget">
+                  <a class="footer-logo" href="{% url 'index' %}">
+                    <img src="{% static 'assets/img/logo.png' %}" alt="Logo">
+                  </a>
+                </div>
+                <div class="widget-copyright">
+                  <p>© 2023 <span>RooMedia</span>. <br>Made with <i class="icon_heart"></i> by <a target="_blank"
+                      href="https://www.linkedin.com/in/arman-ghandilyan/">Arman Ghandilyan</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-4">
+              <div class="widget-item sm-pl-0 pl-70">
+                <h4 class="widget-title">Contact</h4>
+                <ul class="widget-contact-info">
+                  <li class="info-address">Avanesov 8, Yerevan, Armenia</li>
+                  <li class="info-mail"><a href="mailto://hello@roomedia.com">armanghandilyan977@gmail.com</a></li>
+                  <li class="info-phone"><a href="tel://(605)2305253">095-47-41-81</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-10 col-lg-5 col-xl-5">
+              <div class="widget-item widget-menu-wrap-item">
+                <nav class="widget-menu-wrap">
+                  <ul class="nav-menu nav-menu-three nav">
+                    <li><a href="{% url 'index' %}">Pages</a></li>
+                    <li><a href="{% url 'services' %}">Services</a></li>
+                    <li><a href="{% url 'portfolio' %}">Projects</a></li>
+                    <li><a href="{% url 'blog' %}">Blog</a></li>
+                  </ul>
+                </nav>
+                <div class="widget-social-icons social-icons-style-three">
+                  <a href="https://www.facebook.com/"><i class="social social_facebook"></i></a>
+                  <a href="https://www.pinterest.com/"><i class="social social_pinterest"></i></a>
+                  <a href="https://vimeo.com/"><i class="social social_vimeo"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="layer-shape">
+          <img src="{% static 'assets/img/shape/foooter-shape-02.png' %}" alt="Boseo-Image">
+          <img src="{% static 'assets/img/shape/foooter-shape-01.png' %}" alt="Boseo-Image">
+        </div>
+      </footer>
+      <!--== End Footer Area Wrapper ==-->
+
+      <!--== Scroll Top Button ==-->
+      <div class="scroll-to-top"><span class="lnr lnr-chevron-up"></span></div>
+
+      <!--== Start Side Menu ==-->
+      <aside class="off-canvas-wrapper">
+        <div class="off-canvas-inner">
+          <div class="off-canvas-overlay"></div>
+          <!-- Start Off Canvas Content Wrapper -->
+          <div class="off-canvas-content">
+            <!-- Off Canvas Header -->
+            <div class="off-canvas-header">
+              <div class="logo-area">
+                <a href="{% url 'index' %}"> <img src="{% static 'assets/img/logo.png' %}" alt="Logo" /></a>
+              </div>
+              <div class="close-action">
+                <button class="btn-close"><i class="lnr lnr-cross"></i></button>
+              </div>
+            </div>
+
+            <div class="off-canvas-item">
+              <!-- Start Mobile Menu Wrapper -->
+              <div class="res-mobile-menu menu-active-four">
+                <!-- Note Content Auto Generate By Jquery From Main Menu -->
+              </div>
+              <!-- End Mobile Menu Wrapper -->
+            </div>
+            <!-- Off Canvas Footer -->
+            <div class="off-canvas-footer"></div>
+          </div>
+          <!-- End Off Canvas Content Wrapper -->
+        </div>
+      </aside>
+      <!--== End Side Menu ==-->
+    </div>
+
+    <!--=======================Javascript============================-->
+
+    <!--=== Modernizr Min Js ===-->
+
+    <script src="{% static 'assets/js/modernizr.js' %}"></script>
+    <!--=== jQuery Min Js ===-->
+
+    <script src="{% static 'assets/js/jquery-main.js' %}"></script>
+    <!--=== jQuery Migration Min Js ===-->
+
+    <script src="{% static 'assets/js/jquery-migrate.js' %}"></script>
+    <!--=== Popper Min Js ===-->
+
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <!--=== Bootstrap Min Js ===-->
+
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <!--=== jquery UI Min Js ===-->
+
+    <script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+    <!--=== Plugin Collection Js ===-->
+
+    <script src="{% static 'assets/js/plugincollection.js' %}"></script>
+    <!--=== Isotope Min Js ===-->
+
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+
+
+    <!--=== Custom Js ===-->
+
+    <script src="{% static 'assets/js/custom.js' %}"></script>
+      {% endblock %}

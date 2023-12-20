@@ -1,0 +1,307 @@
+/*
+-----------------------------------------------------------------------
+	Pricing CSS
+-----------------------------------------------------------------------
+*/
+
+.pricing-area {
+	&.pricing-default-area {
+		padding: 162px 0 203px;
+		@media #{$lg-device} {
+			padding: 90px 0 120px;
+		}
+		@media #{$sm-device} {
+			padding: 75px 0 45px;
+		}
+		.section-title {
+			margin-bottom: 61px;
+			@media #{$lg-device} {
+				margin-bottom: 45px;
+			}
+			@media #{$xxs-device} {
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
+
+.pricing-items {
+	background-color: $white;
+	border-radius: 5px;
+	box-shadow: 0px 35px 100px 0px rgba(171, 181, 189, 0.35);
+	display: flex;
+	justify-content: space-around;
+	@media #{$sm-device} {
+		box-shadow: none;
+		display: block;
+	}
+	.pricing-item {
+		border-radius: 5px;
+		position: relative;
+		z-index: 1;
+		.pricing-thumb {
+			margin-bottom: 50px;
+			position: relative;
+			text-align: center;
+			img {
+				position: relative;
+			}
+			.shape-img {
+				bottom: -7px;
+		    left: 50%;
+		    position: absolute;
+		    transform: translateX(-50%);
+		    z-index: -1;
+			}
+		}
+		.pricing-amount {
+			margin-bottom: 30px;
+		}
+		.pricing-content {
+			margin-bottom: 50px;
+			.pricing-list {
+				li {
+					border-top: none;
+					line-height: 1;
+			    padding: 10px 0;
+			    &:first-child {
+			    	padding-top: 0;
+			    }
+			    &:last-child {
+			    	padding-bottom: 0;
+			    }
+				}
+			}
+		}
+		.pricing-footer {
+			max-width: 160px;
+			margin: 0 auto;
+		}
+		&.active {
+			overflow: hidden;
+			padding: 61px 75px 79px;
+			@media #{$lg-device} {
+				padding: 61px 35px 55px;
+			}
+			@media #{$md-device} {
+				padding: 61px 15px 55px;
+			}
+			@media #{$sm-device} {
+				position: relative;
+			}
+			.pricing-title {
+				margin-bottom: 45px;
+			}
+		}
+		.pricing-badge {
+			background-color: #669900;
+      position: absolute;
+	    right: -45px;
+	    top: 5px;
+	    text-align: center;
+	    transform: rotate(45deg);
+	    display: inline-block;
+	    padding: 18px 52px;
+	    @media #{$lg-device} {
+				right: -55px;
+				top: 14px;
+				padding: 7px 52px;
+				font-size: 13px;
+	    }
+			h6 {
+				color: $white;
+		    font-size: 14px;
+		    font-weight: $font-weight-semi-bold;
+		    margin: 0;
+		    text-transform: uppercase;
+		    display: inline-block;
+			}
+		}
+	}
+}
+
+.pricing-item {
+	margin-bottom: -38px;
+	padding: 62px 60px 70px;
+	text-align: center;
+	width: 32.479333%;
+	@media #{$md-device} {
+		padding: 62px 15px 70px;
+	}
+	@media #{$sm-device} {
+		box-shadow: 0px 3px 25px 0px rgba(171, 181, 189, 0.35);
+		margin-bottom: 30px;
+		width: 100%;
+	}
+	.pricing-title {
+		display: inline-block;
+		margin-bottom: 25px;
+		h5 {
+	    align-items: center;
+			display: flex;
+			font-size: 16px;
+			font-weight: $font-weight-semi-bold;
+			margin-bottom: 0;
+			text-transform: uppercase;
+			span {
+		    background-color: #65d066;
+		    border-radius: 5px;
+		    color: $white;
+		    font-size: 12px;
+		    display: inline-block;
+		    padding: 8px 18px;
+		    margin-left: 10px;
+			}
+		}
+	}
+	.pricing-amount {
+		margin-bottom: 30px;
+		h2 {
+			color: $theme-color;
+			font-size: 50px;
+			font-weight: $font-weight-semi-bold;
+			margin-bottom: 0;
+			span {
+				font-family: $font-current-theme2;
+				font-size: 16px;
+				font-weight: $font-weight-normal;
+			}
+			sup {
+				font-size: 30px;
+				font-weight: $font-weight-medium;
+			    top: -14px;
+			    margin-right: 5px;
+			}
+		}
+	}
+	.pricing-content {
+		margin-bottom: 50px;
+		.pricing-list {
+			margin-bottom: 0;
+			li {
+				border-top: 1px solid #e2e2e2;
+				padding: 14px 0;
+			}
+		}
+	}
+	.pricing-footer {
+		margin-bottom: 0;
+		.btn-gray {
+			background-color: $white-f4;
+			border-radius: 5px;
+	    display: block;
+			font-family: $font-current-theme1;
+	    font-size: 14px;
+	    font-weight: $font-weight-semi-bold;
+	    letter-spacing: .25px;
+	    line-height: 20px;
+	    padding: 14px 15px;
+	    text-transform: uppercase;
+	    &:hover {
+	    	background-color: $theme-color;
+	    	color: $white;
+
+	    }
+		}
+	}
+	&.active {
+		background-color: $white;
+		box-shadow: 0px 35px 100px 0px rgba(171, 181, 189, 0.35);
+		padding: 61px 75px 87px;
+    transform: translateY(-19px);
+		width: 35.041334%;
+		@media #{$md-device} {
+			padding: 61px 25px 77px;
+		}
+		@media #{$sm-device} {
+			box-shadow: 0px 3px 25px 0px rgba(171, 181, 189, 0.35);
+			padding: 61px 25px 77px;
+			transform: none;
+			width: 100%;
+		}
+		.pricing-title {
+			margin-bottom: 37px;
+		}
+		.pricing-thumb {
+			@media #{$md-device} {
+				margin-bottom: 60px;
+			}
+		}
+		.pricing-footer {
+			.btn-gray {
+				background-color: $theme-color;
+				color: $white;
+			}
+		}
+	}
+}
+
+.pricing-tab-switch {
+	background-color: $white;
+	box-shadow: 0px 15px 60px 0px rgba(171, 181, 189, 0.35);
+	border: 1px solid $theme-color;
+	border-radius: 5px;
+	display: inline-block;
+	margin-bottom: 76px;
+	padding: 4px;
+	position: relative;
+	z-index: 1;
+	@media #{$md-device} {
+		margin-bottom: 70px;
+	}
+	@media #{$sm-device} {
+		margin-bottom: 58px;
+	}
+	li {
+		display: inline-block;
+		a {
+			border-radius: 5px;
+			color: $black-0e;
+			display: inline-block;
+			font-size: 14px;
+			font-weight: $font-weight-semi-bold;
+			height: 50px;
+			line-height: 50px;
+			letter-spacing: .25px;
+			text-transform: uppercase;
+			text-align: center;
+			width: 140px;
+			@include transition(all .4s);
+			@media #{$xxs-device} {
+				width: 138px;
+			}
+		}
+
+		&.active {
+			a {
+				color: $white;
+			}
+		}
+	}
+	.switch {
+		background-color: $theme-color;
+		width: calc(50% - 6px);
+		height: calc(100% - 8px);
+		position: absolute;
+		border-radius: 5px;
+		top: calc(0px + 4px);
+		left: calc(0px + 4px);
+		margin: 0;
+		padding: 0;
+		z-index: -1;
+		@include transition(all .4s);
+		&.off {
+			left: 148px;
+			@include transition(all .4s);
+			@media #{$xxs-device} {
+				left: 146px;
+			}
+		}
+	}
+}
+
+.pricing-content-area {
+	align-items: center;
+	display: flex;
+	position: relative;
+}

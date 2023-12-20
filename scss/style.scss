@@ -1,0 +1,53 @@
+// Table of contents
+@import "tableofcontent";
+
+// imported styles
+@import "common/imported";
+
+// Base
+@import "common/variables";
+@import "common/mixins";
+@import "common/rfs";
+
+// Typography
+ @import "common/typography";
+
+// Common Styles
+@import "roomedia/common";
+@import "roomedia/navbar";
+
+// Header
+@import "header/header";
+
+// Banner Styles
+@import "roomedia/banner";
+
+// Components
+@import "roomedia/about";
+@import "roomedia/service";
+@import "roomedia/team";
+@import "roomedia/gallery";
+@import "roomedia/portfolio";
+@import "roomedia/pricing";
+@import "roomedia/testimonial";
+@import "roomedia/brand-logo";
+@import "roomedia/feature";
+@import "roomedia/funfact";
+@import "roomedia/divider";
+@import "roomedia/icon-box";
+@import "roomedia/form";
+@import "roomedia/case";
+
+// Pages
+@import "pages/home-default";
+
+
+
+// Blog
+@import "roomedia/blog";
+
+// Contact
+@import "roomedia/contact";
+
+// Footer
+@import "footer/footer";

@@ -1,0 +1,454 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+<main class="main-content site-wrapper-reveal">
+    <!--== Start Blog Area Wrapper ==-->
+    <section class="blog-details-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 m-auto text-center">
+                    <h2 class="title">latest <span>from our blog</span></h2>
+                    <div class="meta">
+                        By
+                        <a class="author" href="https://www.linkedin.com/in/arman-ghandilyan/">Admin</a>
+                        <a href="{% url 'blog' %}">4 September 2023</a>
+                        <a class="category" href="https://ads.google.com/"><span>In</span>Google Ads</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid pl-0 pr-0">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="swiper-container "> <!-- post-gallery-slider-container-->
+                        <div class="swiper-wrapper post-gallery-slider">
+                            <div class="swiper-slide gallery-slide-item">
+                                <img src="{% static 'assets/img/blog/blog-details-01.jpg' %}" alt="Roomedia-Blog">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-xl-8 m-auto">
+                    <div class="post-details-content">
+                        <div class="post-details-body">
+                            <div class="content">
+                                <p class="text-pra">Revolutionize operations with our latest software. Streamline
+                                    processes, enhance efficiency, and stay ahead of the curve in the digital era.</p>
+                                <p>IT and new technologies are crucial for business development in today's digital age.
+                                    As businesses strive to stay competitive, they must continually adapt and leverage
+                                    the advancements in IT to streamline processes, improve productivity, and enhance
+                                    customer experiences. By adopting and integrating new technologies, such as
+                                    artificial intelligence, cloud computing, and data analytics, businesses can gain a
+                                    competitive edge, optimize operations, and unlock new opportunities for growth and
+                                    innovation.</p>
+                                <div class="blockquote-area">
+                                    <blockquote class="blockquote-style">
+                                        <div class="icon">
+                                            <img src="{% static 'assets/img/icons/right-quote.png' %}" alt="Icon">
+                                        </div>
+                                        <p>Effective time management is essential in the B2B industry, and IT tools play
+                                            a pivotal role in ensuring efficient workflows and productivity. By
+                                            utilizing various IT tools, such as project management software,
+                                            communication platforms, and calendar applications, businesses can
+                                            streamline task assignment, efficiently collaborate with team members, track
+                                            progress, and meet deadlines. These tools enable better organization,
+                                            prioritization, and allocation of resources, ultimately enhancing
+                                            productivity and contributing to successful B2B operations.</p>
+                                    </blockquote>
+                                </div>
+                                <p class="mb-40">Unlock the full potential of your business with our technology-driven
+                                    strategies. We specialize in creating customized solutions tailored to your unique
+                                    needs.</p>
+                                <h4>Determining a Marketing Budget Can be Frustrating.</h4>
+                                <p>Stay ahead of the technological curve with insights from our experts. Explore the
+                                    latest trends, emerging technologies, and how they impact businesses globally.
+                                    </p>
+                                <ul class="list-style">
+                                    <li><i class="icon_box-checked"></i> Discover the power of artificial intelligence
+                                        and machine learning in business.
+                                    </li>
+                                    <li><i class="icon_box-checked"></i> Navigate the digital landscape with our expert
+                                        guidance on cybersecurity.
+                                    </li>
+                                    <li><i class="icon_box-checked"></i> Transform your business processes with
+                                        automation and advanced analytics.
+                                    </li>
+                                    <li><i class="icon_box-checked"></i> Join us in shaping the future of technology and
+                                        business innovation.
+                                    </li>
+                                </ul>
+                                <div class="widget-social-tags">
+                                    <div class="widget-tags">
+                                        <ul>
+                                            <li><a href="#/">Digital</a></li>
+                                            <li><a href="#/">Growth Hack</a></li>
+                                            <li><a href="#/">Business</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="widget-social-icons">
+                                        <span>Share On: </span>
+                                        <a href="https://www.facebook.com/"><i class="social social_facebook"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="social social_pinterest"></i></a>
+                        <a href="https://vimeo.com/"><i class="social social_vimeo"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="related-posts">
+                                <h2 class="inner-title">Related Posts</h2>
+                                <div class="swiper-container related-post-slider-container">
+                                    <!-- Add Arrows -->
+                                    <div class="swiper-button-next"><i class="lnr lnr-arrow-right"></i></div>
+                                    <div class="swiper-button-prev"><i class="lnr lnr-arrow-left"></i></div>
+                                    <div class="swiper-wrapper related-post-slider">
+                                        {% for post in latest_posts %}
+                                        <div class="swiper-slide post-item">
+                                            <div class="thumb">
+                                                <a href="{% url 'blog_details' %}"> <img
+                                                        src="{{ post.img.url }}"
+                                                        alt="Roomedia-Blog"></a>
+                                                <a class="icon" href="{% url 'blog_details' %}">
+                                                    <i class="lnr lnr-volume-high"></i>
+                                                </a>
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    <a href="{% url 'blog_details' %}">{{ post.title }}</a>
+                                                </h4>
+                                                <p>{{ post.content }}</p>
+                                                <div class="meta bottom meta-bottom">
+                                                    <div>
+                                                        <a class="category" href="{% url 'blog' %}"> <img
+                                                                src="{% static 'assets/img/icons/layer.png' %}"
+                                                                alt="Icon"> In
+                                                            <span>Business</span></a>
+                                                        <a class="post-date" href="{% url 'blog' %}"> <img
+                                                                src="{% static 'assets/img/icons/calender.png' %}"
+                                                                alt="Icon"> 16/4/2021</a>
+                                                    </div>
+                                                    <div class="post-share">
+                                                        <a class="icon-share" href="#/"> <img
+                                                                src="{% static 'assets/img/icons/share.png' %}"
+                                                                alt="Icon"></a>
+                                                        <ul>
+                                                            <li><a class="color-facebook" href="https://www.facebook.com/"><i
+                                                                    class="social_facebook"></i></a></li>
+                                                            <li><a class="color-dribbble" href="https://dribble.com/"><i
+                                                                    class="social_dribbble"></i></a></li>
+                                                            <li><a class="color-pinterest" href="https://www.pinterest.com/"><i
+                                                                    class="social_pinterest"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        {% endfor %}
+                                        <!--== Start Blog Post Item ==-->
+                                        <div class="swiper-slide post-item">
+                                            <div class="thumb">
+                                                <a href="{% url 'blog_details' %}"> <img
+                                                        src="{% static 'assets/img/blog/09.jpg' %}"
+                                                        alt="Roomedia-Blog"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    <a href="{% url 'blog_details' %}">Sample Articles With Long Text
+                                                        Lorem Ispum</a>
+                                                </h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur cora adipiscing elit. Quisque
+                                                    vel...</p>
+                                                <div class="meta bottom meta-bottom">
+                                                    <div>
+                                                        <a class="category" href="{% url 'blog' %}"> <img
+                                                                src="{% static 'assets/img/icons/layer.png' %}"
+                                                                alt="Icon"> In
+                                                            <span>Business</span></a>
+                                                        <a class="post-date" href="{% url 'blog' %}"> <img
+                                                                src="{% static 'assets/img/icons/calender.png' %}"
+                                                                alt="Icon"> 16/4/2021</a>
+                                                    </div>
+                                                    <div class="post-share">
+                                                        <a class="icon-share" href="#/"> <img
+                                                                src="{% static 'assets/img/icons/share.png' %}"
+                                                                alt="Icon"></a>
+                                                        <ul>
+                                                            <li><a class="color-facebook" href="#/"><i
+                                                                    class="social_facebook"></i></a></li>
+                                                            <li><a class="color-twitter" href="#/"><i
+                                                                    class="social_twitter"></i></a></li>
+                                                            <li><a class="color-dribbble" href="#/"><i
+                                                                    class="social_dribbble"></i></a></li>
+                                                            <li><a class="color-pinterest" href="#/"><i
+                                                                    class="social_pinterest"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--== End Blog Post Item ==-->
+
+                                        <!--== Start Blog Post Item ==-->
+                                        <div class="swiper-slide post-item">
+                                            <div class="thumb">
+                                                <a href="{% url 'blog_details' %}"> <img
+                                                        src="{% static 'assets/img/blog/03.jpg' %}"
+                                                        alt="Roomedia-Blog"></a>
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    <a href="{% url 'blog_details' %}">Sample Articles With Long Text
+                                                        Lorem Ispum</a>
+                                                </h4>
+                                                <p>Lorem ipsum dolor sit amet, consectetur cora adipiscing elit. Quisque
+                                                    vel...</p>
+                                                <div class="meta bottom meta-bottom">
+                                                    <div>
+                                                        <a class="category" href="{% url 'blog' %}"> <img
+                                                                src="{% static 'assets/img/icons/layer.png' %}"
+                                                                alt="Icon"> In
+                                                            <span>Business</span></a>
+                                                        <a class="post-date" href="{% url 'blog' %}"> <img
+                                                                src="{% static 'assets/img/icons/calender.png' %}"
+                                                                alt="Icon"> 16/4/2021</a>
+                                                    </div>
+                                                    <div class="post-share">
+                                                        <a class="icon-share" href="#/"> <img
+                                                                src="{% static 'assets/img/icons/share.png' %}"
+                                                                alt="Icon"></a>
+                                                        <ul>
+                                                            <li><a class="color-facebook" href="#/"><i
+                                                                    class="social_facebook"></i></a></li>
+                                                            <li><a class="color-twitter" href="#/"><i
+                                                                    class="social_twitter"></i></a></li>
+                                                            <li><a class="color-dribbble" href="#/"><i
+                                                                    class="social_dribbble"></i></a></li>
+                                                            <li><a class="color-pinterest" href="#/"><i
+                                                                    class="social_pinterest"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--== End Blog Post Item ==-->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="comment-area">
+                                <h2 class="inner-title">{{ comments|length }} Comments</h2>
+                                {% for comment in comments %}
+                                <div class="comment-content">
+                                    <div class="single-comment">
+                                        <div class="author-info">
+                                            <div class="thumb">
+                                                <img src="{{ comment.img.url }}" alt="Image" width="80px" height="80px">
+                                            </div>
+                                            <div class="author-details">
+                                                <ul>
+                                                    <li class="name">{{ comment.name }} <span>-</span></li>
+                                                    <li class="meta-date">{{ comment.date }}</li>
+                                                </ul>
+                                                <p>{{ comment.comment }}</p>
+<!--                                                <a class="btn-reply" href="#/">Reply</a>-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {% endfor %}
+<!--                                    <div class="single-comment">-->
+<!--                                        <div class="author-info">-->
+<!--                                            <div class="thumb">-->
+<!--                                                <img src="{% static 'assets/img/blog/author-03.png' %}" alt="Image">-->
+<!--                                            </div>-->
+<!--                                            <div class="author-details">-->
+<!--                                                <ul>-->
+<!--                                                    <li class="name">Danny Rivera <span>-</span></li>-->
+<!--                                                    <li class="meta-date">28 Jan, 2021</li>-->
+<!--                                                </ul>-->
+<!--                                                <p>Aliquam finibus, lectus eu tempor pretium, tellus erat sodales-->
+<!--                                                    mauris, ac tincidunt-->
+<!--                                                    nulla dolor a dui. Nullam pellentesque, felis hendrerit fringilla-->
+<!--                                                    iaculis, elit ligula-->
+<!--                                                    bibendum diam</p>-->
+<!--                                                <a class="btn-reply" href="#/">Reply</a>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+                                </div>
+                                <h2 class="inner-title pt-10">Leave a Comment</h2>
+                                <div class="comment-form-wrap">
+                                    <div class="clearfix"></div>
+                                    <form action="{% url 'blog_details' %}" method="post">
+                                        {% csrf_token %}
+                                        <div class="comment-form-content">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input class="form-control" type="text" placeholder="Name *"
+                                                               required="" name="name">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <input class="form-control" type="email" placeholder="Email *"
+                                                               required="" name="email">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <input class="form-control" type="text" placeholder="Website"
+                                                               required="" name="website">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                  <textarea class="form-control" name="comment" id="comment" cols="45" rows="7"
+                                            placeholder="Your Comment *" required=""></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row pt-30">
+                                                <div class="col-md-12">
+                                                    <div class="form-group mb-0">
+                                                        <button class="btn btn-theme" type="submit">Post Comment
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== End Blog Area Wrapper ==-->
+</main>
+
+<!--== Start Footer Area Wrapper ==-->
+<footer class="footer-area reveal-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-3 col-xl-3">
+                <div class="widget-item mt-0">
+                    <div class="about-widget">
+                        <a class="footer-logo" href="{% url 'index' %}">
+                            <img src="{% static 'assets/img/logo.png' %}" alt="Logo">
+                        </a>
+                    </div>
+                    <div class="widget-copyright">
+                        <p>© 2023 <span>RooMedia</span>. <br>Made with <i class="icon_heart"></i> by <a target="_blank"
+                                                                                                        href="https://www.linkedin.com/in/arman-ghandilyan/">Arman
+                            Ghandilyan</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-4">
+                <div class="widget-item sm-pl-0 pl-70">
+                    <h4 class="widget-title">Contact</h4>
+                    <ul class="widget-contact-info">
+                        <li class="info-address">Avanesov 8, Yerevan, Armenia</li>
+                        <li class="info-mail"><a href="mailto://hello@roomedia.com">armanghandilyan977@gmail.com</a>
+                        </li>
+                        <li class="info-phone"><a href="tel://(605)2305253">095-47-41-81</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-10 col-lg-5 col-xl-5">
+                <div class="widget-item widget-menu-wrap-item">
+                    <nav class="widget-menu-wrap">
+                        <ul class="nav-menu nav-menu-three nav">
+                            <li><a href="{% url 'index' %}">Pages</a></li>
+                            <li><a href="{% url 'services' %}">Services</a></li>
+                            <li><a href="{% url 'portfolio' %}">Projects</a></li>
+                            <li><a href="{% url 'blog' %}">Blog</a></li>
+                        </ul>
+                    </nav>
+                    <div class="widget-social-icons social-icons-style-three">
+                        <a href="https://www.facebook.com/"><i class="social social_facebook"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="social social_pinterest"></i></a>
+                        <a href="https://vimeo.com/"><i class="social social_vimeo"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="layer-shape">
+        <img src="{% static 'assets/img/shape/foooter-shape-02.png' %}" alt="Boseo-Image">
+        <img src="{% static 'assets/img/shape/foooter-shape-01.png' %}" alt="Boseo-Image">
+    </div>
+</footer>
+<!--== End Footer Area Wrapper ==-->
+
+<!--== Scroll Top Button ==-->
+<div class="scroll-to-top"><span class="lnr lnr-chevron-up"></span></div>
+
+<!--== Start Side Menu ==-->
+<aside class="off-canvas-wrapper">
+    <div class="off-canvas-inner">
+        <div class="off-canvas-overlay"></div>
+        <!-- Start Off Canvas Content Wrapper -->
+        <div class="off-canvas-content">
+            <!-- Off Canvas Header -->
+            <div class="off-canvas-header">
+                <div class="logo-area">
+                    <a href="{% url 'index' %}"> <img src="{% static 'assets/img/logo.png' %}" alt="Logo"/></a>
+                </div>
+                <div class="close-action">
+                    <button class="btn-close"><i class="lnr lnr-cross"></i></button>
+                </div>
+            </div>
+
+            <div class="off-canvas-item">
+                <!-- Start Mobile Menu Wrapper -->
+                <div class="res-mobile-menu menu-active-five">
+                    <!-- Note Content Auto Generate By Jquery From Main Menu -->
+                </div>
+                <!-- End Mobile Menu Wrapper -->
+            </div>
+            <!-- Off Canvas Footer -->
+            <div class="off-canvas-footer"></div>
+        </div>
+        <!-- End Off Canvas Content Wrapper -->
+    </div>
+</aside>
+<!--== End Side Menu ==-->
+</div>
+
+<!--=======================Javascript============================-->
+
+<!--=== Modernizr Min Js ===-->
+
+<script src="{% static 'assets/js/modernizr.js' %}"></script>
+<!--=== jQuery Min Js ===-->
+
+<script src="{% static 'assets/js/jquery-main.js' %}"></script>
+<!--=== jQuery Migration Min Js ===-->
+
+<script src="{% static 'assets/js/jquery-migrate.js' %}"></script>
+<!--=== Popper Min Js ===-->
+
+<script src="{% static 'assets/js/popper.min.js' %}"></script>
+<!--=== Bootstrap Min Js ===-->
+
+<script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+<!--=== jquery UI Min Js ===-->
+
+<script src="{% static 'assets/js/jquery-ui.min.js' %}"></script>
+<!--=== Plugin Collection Js ===-->
+
+<script src="{% static 'assets/js/plugincollection.js' %}"></script>
+<!--=== Isotope Min Js ===-->
+
+<script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+
+
+<!--=== Custom Js ===-->
+
+<script src="{% static 'assets/js/custom.js' %}"></script>
+{% endblock %}

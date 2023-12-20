@@ -1,0 +1,153 @@
+/*
+-----------------------------------------------------------------------
+	About CSS
+-----------------------------------------------------------------------
+*/
+.about-area {
+  padding: 128px 0 165px;
+  @media #{$lg-device} {
+    padding: 85px 0 100px;
+  }
+  @media #{$sm-device} {
+    padding: 75px 0;
+  }
+
+  .section-title {
+    margin-bottom: 41px;
+  }
+
+  .about-content {
+    padding: 31px 0 0 70px;
+    @media #{$lg-device} {
+      padding: 10px 0 0 30px;
+    }
+    @media #{$md-device} {
+      padding: 0;
+    }
+  }
+
+  .thumb {
+    padding-left: 23px;
+    @media #{$lg-device} {
+      padding-left: 0;
+    }
+    @media #{$md-device} {
+      margin-bottom: 60px;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+
+  .accordian-content {
+    margin-bottom: 83px;
+    @media #{$lg-device} {
+      margin-bottom: 55px;
+    }
+    @media #{$xs-device} {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.about-page-wrapper {
+  .about-area {
+    padding: 98px 0 37px;
+    @media #{$md-device} {
+      padding: 78px 0 0;
+    }
+    .shape-layer {
+      .shape {
+        &-one {
+          left: -68px;
+          top: 154px;
+        }
+        &-two {
+          left: -211px;
+          top: 316px;
+        }
+        &-three {
+          left: -66px;
+          top: 390px;
+        }
+        &-four {
+          right: -28px;
+          top: 64px;
+        }
+        &-five {
+          right: -173px;
+          top: 138px;
+        }
+        &-six {
+          right: -108px;
+          top: 286px;
+        }
+        &-eight {
+          height: 18px;
+          right: 150px;
+          top: 560px;
+          width: 18px;
+        }
+      }
+    }
+  }
+  .contact-info-style {
+    &.contact-info-content {
+      border: none;
+      padding: 114px 0 109px;
+      @media #{$lg-device} {
+        padding: 90px 0 100px;
+      }
+      @media #{$md-device} {
+        padding: 100px 0;
+      }
+      @media #{$sm-device} {
+        padding: 80px 0 40px;
+      }
+      .contact-info-item {
+        justify-content: normal;
+        &.item-style-two {
+          justify-content: normal
+        }
+      }
+    }
+  }
+  .form-consultation-style {
+    margin-top: 11px;
+    h5 {
+      color: $theme-color;
+      font-weight: $font-weight-semi-bold;
+      letter-spacing: -.2px;
+      margin-bottom: 40px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.why-choose-area {
+  padding: 147px 0 150px;
+  @media #{$lg-device} {
+    padding: 90px 0 100px;
+  }
+  @media #{$sm-device} {
+    padding: 70px 0 80px;
+  }
+  .feature-item {
+    margin-bottom: 44px;
+    padding-right: 70px;
+    @media #{$xs-device} {
+      padding-right: 0;
+    }
+    h5 {
+      color: $black;
+      font-size: 20px;
+      font-weight: $font-weight-semi-bold;
+      letter-spacing: -.25px;
+      margin-bottom: 19px;
+    }
+    p {
+      color: $black-999;
+      letter-spacing: -.25px;
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,491 @@
+/*
+-----------------------------------------------------------------------
+	Portfolio CSS
+-----------------------------------------------------------------------
+*/
+
+.portfolio-area {
+	&.portfolio-default-area {
+		padding: 173px 0 214px;
+		@media #{$lg-device} {
+			padding: 100px 0 143px;
+		}
+		@media #{$md-device} {
+			padding: 100px 0 85px;
+		}
+		@media #{$sm-device} {
+			padding: 75px 0 20px;
+		}
+		.section-title {
+			margin-bottom: -121px;
+			text-transform: uppercase;
+			@media #{$sm-device} {
+				margin-bottom: 50px;
+			}
+		}
+		.portfolio-items {
+			align-items: center;
+			display: flex;
+			@media #{$sm-device} {
+				display: block;
+				margin-bottom: 30px;
+			}
+			.portfolio-item {
+				border-radius: 5px 0 0 5px;
+				margin-bottom: 0;
+				@media #{$sm-device} {
+					margin-bottom: 30px;
+				}
+				.thumb {
+					a {
+						img {
+							border-radius: 0;
+							@media #{$sm-device} {
+								border-radius: 5px;
+							}
+						}
+					}
+				}
+				.portfolio-info {
+					border-radius: 0;
+				}
+			}
+			.content-right {
+				.portfolio-item {
+					border-radius: 0;
+					&:first-child {
+						border-radius: 5px 5px 0 0;
+					}
+					&:last-child {
+						border-radius: 0 0 5px 5px;
+					}
+				}
+			}
+		}
+		.portfolio-footer {
+			margin-top: -143px;
+			@media #{$md-device} {
+				margin-top: -85px;
+			}
+			@media #{$sm-device} {
+				margin-top: 40px;
+			}
+		}
+	}
+}
+
+.portfolio-filter-menu {
+	margin-bottom: 100px;
+	button {
+		background-color: transparent;
+		border: none;
+		color: $black-0e;
+		font-family: $font-current-theme1;
+		font-size: 14px;
+		font-weight: $font-weight-semi-bold;
+		letter-spacing: .25px;
+		margin-right: 60px;
+		padding: 1px 0;
+		position: relative;
+		text-transform: uppercase;
+		@include transition(0.3s);
+		@media #{$md-device} {
+			margin-right: 30px;
+		}
+		@media #{$sm-device} {
+			font-size: 13px;
+			margin-right: 20px;
+		}
+		@media #{$xs-device} {
+			font-size: 12px;
+			margin-right: 15px;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+		&:after {
+			background-color: $theme-color;
+			bottom: 3px;
+			content: "";
+			height: 1px;
+			position: absolute;
+			right: 0;
+			width: 0;
+			@include transition(0.3s);
+		}
+		&:hover, &.active {
+			color: $theme-color;
+			&:after {
+				left: 0;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.portfolio-item {
+	margin-bottom: 30px;
+	overflow: hidden;
+	position: relative;
+
+	.thumb {
+		a {
+			img {
+				border-radius: 5px;
+				width: 100%;
+			}
+		}
+	}
+
+	.portfolio-info {
+		background-color: $theme-color;
+		border-radius: 0 0 5px 5px;
+		bottom: 0;
+    left: 0;
+    opacity: 0;
+    padding: 44px 40px 40px;
+    position: absolute;
+    transform: translateY(100%);
+    visibility: hidden;
+    width: 100%;
+    @include transition(0.4s);
+    @media #{$xs-device} {
+    	padding: 30px 15px 25px;
+    }
+		.title {
+			font-size: 24px;
+      line-height: 1;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: capitalize;
+      transition: 0.4s;
+      transform: translateY(20px);
+      @include transition(0.4s);
+	    @media #{$lg-device} {
+	    	font-size: 20px;
+	    	line-height: 1.2;
+			}
+	    @media #{$md-device} {
+	    	font-size: 18px;
+	    	line-height: 1.2;
+			}
+	    @media #{$xs-device} {
+	    	font-size: 22px;
+	    	margin-bottom: 10px;
+			}
+	    @media #{$xxs-device} {
+	    	font-size: 18px;
+	    }
+			a {
+				color: $white;
+			}
+		}
+		.category {
+			color: $white;
+      font-size: 16px;
+      line-height: 1.6;
+      text-transform: capitalize;
+      display: inline-block;
+      transform: translateY(30px);
+			@include transition(0.4s);
+			@media #{$md-device} {
+	    	font-size: 14px;
+			}
+		}
+		.btn-icon {
+	    color: #fff;
+			font-size: 30px;
+	    position: absolute;
+	    right: 40px;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    @media #{$lg-device} {
+	    	font-size: 24px;
+	    }
+	    @media #{$md-device} {
+	    	font-size: 18px;
+	    }
+	    @media #{$xs-device} {
+	    	display: none;
+	    }
+		}
+	}
+
+	.inner-content {
+		position: relative;
+		&:hover {
+			.portfolio-info {
+				opacity: 1;
+				transform: translateY(0);
+				visibility: visible;
+				.title, .category {
+	        transform: translate(0);
+	        transition-delay: .1s;
+		    }
+			}
+		}
+		.portfolio-overview {
+			margin-top: 102px;
+			@media #{$lg-device} {
+				margin-top: 80px;
+			}
+			@media #{$sm-device} {
+				margin-top: 65px;
+			}
+			.overview-title {
+				align-items: center;
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 42px;
+				@media #{$sm-device} {
+					display: block;
+				}
+			}
+			.title {
+				color: $black-0e;
+				font-size: 44px;
+				letter-spacing: -1.25px;
+				line-height: 1.25;
+				margin-bottom: 0;
+				@media #{$lg-device} {
+		      font-size: 40px;
+		    }
+		    @media #{$sm-device} {
+		      font-size: 36px;
+		    }
+		    @media #{$xs-device} {
+		      font-size: 24px;
+		    }
+			}
+			.social-icons {
+				margin-bottom: 5px;
+				a {
+					border-radius: 50%;
+					color: $white;
+					display: inline-block;
+					font-size: 16px;
+					height: 36px;
+					line-height: 40px;
+					text-align: center;
+					width: 36px;
+					margin-right: 11px;
+					&:last-child {
+						margin-right: 0;
+					}
+					&.color-facebook {
+						background-color: #3b5999;
+					}
+					&.color-twitter {
+						background-color: #55acef;
+					}
+					&.color-instagram {
+						background-color: #e04f8b;
+					}
+					&.color-dribbble {
+						background-color: #bd081b;
+					}
+				}
+			}
+			.desc {
+				ul {
+					li {
+						line-height: 2.25;
+						span {
+							color: $black-0e;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.portfolio-filter-tab {
+	margin-bottom: 5px;
+	margin-left: 100px;
+	.nav {
+		&.nav-tabs {
+			border: none;
+			.nav-item {
+				margin-bottom: 0;
+				.nav-link {
+					background-color: transparent;
+					border: none;
+					color: $black-0e;
+					font-family: $font-current-theme1;
+					font-size: 14px;
+					font-weight: $font-weight-semi-bold;
+					letter-spacing: .25px;
+					margin-right: 67px;
+					padding: 1px 0;
+					position: relative;
+					text-transform: uppercase;
+					@include transition(0.3s);
+					@media #{$xlsm-device} {
+						margin-right: 25px;
+					}
+					&:after {
+						background-color: $theme-color;
+						bottom: 3px;
+						content: "";
+						height: 1px;
+						position: absolute;
+						right: 0;
+						width: 0;
+						@include transition(0.3s);
+					}
+					&:hover, &.active {
+						color: $theme-color;
+						&:after {
+							left: 0;
+							width: 100%;
+						}
+					}
+				}
+
+				&:last-child {
+					.nav-link {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.masonry-column4 {
+	.portfolio-item {
+		overflow: visible;
+	}
+}
+
+.no-gutter {
+	.portfolio-item {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.gutter-45 {
+	margin-right: -22.5px;
+	margin-left: -22.5px;
+	.portfolio-item {
+		margin-bottom: 45px;
+		padding-left: 22.5px;
+		padding-right: 22.5px;
+	}
+}
+
+.gutter-50 {
+	margin-right: -25px;
+	margin-left: -25px;
+	@media #{$lg-device} {
+		margin-right: -15px;
+		margin-left: -15px;
+	}
+	.portfolio-item {
+		margin-bottom: 50px;
+		padding-left: 25px;
+		padding-right: 25px;
+		@media #{$lg-device} {
+			margin-bottom: 30px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+
+.portfolio-footer {
+	margin-top: 40px;
+	.btn-bottom {
+		color: $black-0e;
+		display: inline-block;
+		font-family: $font-current-theme1;
+		font-size: 14px;
+		font-weight: $font-weight-semi-bold;
+		letter-spacing: .25px;
+		padding: 0;
+		position: relative;
+		text-transform: uppercase;
+		&:before {
+			background-color: $black-0e;
+			bottom: 1px;
+		    content: "";
+		    position: absolute;
+		    left: 0;
+		    height: 1px;
+		    width: 100%;
+		    @include transition(0.3s);
+		}
+		&:hover {
+			color: $theme-color;
+			&:before {
+				background-color: $theme-color;
+			}
+		}
+	}
+}
+
+.portfolio-page-wrapper {
+	.portfolio-area {
+		padding-bottom: 220px;
+		@media #{$sm-device} {
+			padding-bottom: 120px;
+		}
+		@media #{$xs-device} {
+			padding-bottom: 80px;
+		}
+		.section-title {
+			margin-bottom: 66px;
+			@media #{$sm-device} {
+				margin-bottom: 45px;
+			}
+		}
+	}
+}
+
+.portfolio-details-page-wrapper {
+	.page-title-area {
+		.page-title-content {
+			.title {
+				text-transform: capitalize;
+			}
+		}
+	}
+	.divider-content-style1 {
+		padding: 130px 0 100px;
+		@media #{$lg-device} {
+			padding: 40px 0 90px;
+		}
+		@media #{$sm-device} {
+			padding: 40px 0 30px;
+		}
+		@media #{$xxs-device} {
+			padding: 40px 0 0;
+		}
+		.thumb {
+			img {
+				@media #{$lg-device} {
+					right: auto;
+				}
+			}
+		}
+		.content {
+			.section-title {
+				.title {
+					font-size: 44px;
+					text-transform: capitalize;
+					@media #{$lg-device} {
+			      font-size: 40px;
+			    }
+			    @media #{$sm-device} {
+			      font-size: 36px;
+			    }
+			    @media #{$xs-device} {
+			      font-size: 24px;
+			    }
+				}
+			}
+		}
+	}
+}

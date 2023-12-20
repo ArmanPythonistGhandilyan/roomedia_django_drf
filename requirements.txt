@@ -1,0 +1,13 @@
+Django==4.2.7
+django-debug-toolbar==4.2.0
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.3.1
+drf-yasg==1.21.7
+Pillow==10.1.0
+
+
+python-decouple==3.8
+
+black==23.11.0
+flake8==6.1.0
+isort==5.12.0

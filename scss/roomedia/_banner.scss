@@ -1,0 +1,453 @@
+/*
+-----------------------------------------------------------------------
+	Home Slider CSS
+-----------------------------------------------------------------------
+*/
+
+.home-slider-area {
+
+	&.slider-default {
+		align-items: center;
+		background-color: #f0f2f4;
+		display: flex;
+		position: relative;
+		z-index: 1;
+		@media #{$sm-device} {
+			padding-bottom: 80px;
+		}
+		@media #{$xs-device} {
+			padding-bottom: 70px;
+		}
+
+    .slider-content-area {
+    	margin-top: 71px;
+    	text-align: center;
+    	@media #{$xs-device} {
+    		margin-top: 55px;
+    	}
+
+    	h2 {
+    		font-size: 48px;
+    		font-weight: $font-weight-normal;
+    		letter-spacing: -.618px;
+	      line-height: 60px;
+	      margin-bottom: 16px;
+	      text-transform: uppercase;
+	      span {
+	      	font-weight: $font-weight-bold;
+	      }
+    		@media #{$md-device} {
+    			font-size: 40px;
+    			line-height: 50px;
+    		}
+    		@media #{$xs-device} {
+    			font-size: 36px;
+    			line-height: 44px;
+    		}
+    		@media #{$xxs-device} {
+    			font-size: 30px;
+    			line-height: 42px;
+    			br {
+    				display: none;
+    			}
+    		}
+    	}
+
+    	p {
+    		color: $black-666;
+    		font-family: $font-current-theme1;
+    		font-size: 16px;
+    		line-height: 30px;
+	    	margin-bottom: 45px;
+    		@media #{$sm-device} {
+    			br {
+    				display: none;
+    			}
+    		}
+    		@media #{$xxs-device} {
+    			font-size: 13px;
+    		}
+    	}
+
+    	.input-btn-group {
+	    	max-width: 770px;
+	    	margin: 0 auto;
+    		@media #{$md-device} {
+    			max-width: 650px;
+    		}
+    		@media #{$sm-device} {
+    			max-width: 540px;
+    		}
+    		@media #{$xs-device} {
+    			display: block;
+    			max-width: 460px;
+    			padding: 5px;
+    		}
+
+	    	.form-control {
+	    		@media #{$sm-device} {
+	    			width: 201px;
+	    		}
+	    		@media #{$xs-device} {
+	    			border-right: none;
+	    			border-bottom: 1px solid #eaeaea;
+	    			height: 50px;
+	    			max-width: none;
+	    			width: 100%;
+	    		}
+	    	}
+	    	.btn-theme {
+	    		@media #{$xs-device} {
+	    			width: 100%;
+	    		}
+	    	}
+    	}
+    }
+
+    .shape-layer {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: -2;
+			@media #{$sm-device} {
+				display: none;
+			}
+			.shape {
+				&-one {
+					border-radius: 50%;
+					background-color: #f6825a;
+					height: 25px;
+					position: absolute;
+					width: 25px;
+					top: 110px;
+					left: 46px;
+					-webkit-animation: animation-two linear infinite 5s;
+					-moz-animation: animation-two linear infinite 5s;
+					-o-animation: animation-two linear infinite 5s;
+					animation: animation-two linear infinite 5s;
+					@media #{$xxl-device} {
+						left: 145px;
+					}
+					@media #{$lg-device} {
+						left: 105px;
+						top: 60px;
+					}
+					@media #{$md-device} {
+						top: 40px;
+					}
+				}
+				&-two {
+					border-radius: 50%;
+					background-color: #eb4435;
+					height: 15px;
+					position: absolute;
+					width: 15px;
+					top: 272px;
+					left: -98px;
+					-webkit-animation: animation-one linear infinite 5s;
+					-moz-animation: animation-one linear infinite 5s;
+					-o-animation: animation-one linear infinite 5s;
+					animation: animation-one linear infinite 5s;
+					@media #{$xxl-device} {
+						left: 10px;
+					}
+					@media #{$lg-device} {
+						left: -30pxpx;
+						top: 170px;
+					}
+				}
+				&-three {
+					border-radius: 50%;
+					background-color: #532e5b;
+					height: 10px;
+					position: absolute;
+					width: 10px;
+					top: 346px;
+					left: 48px;
+					-webkit-animation: animation-one linear infinite 8s;
+					-moz-animation: animation-one linear infinite 8s;
+					-o-animation: animation-one linear infinite 8s;
+					animation: animation-one linear infinite 8s;
+					@media #{$xxl-device} {
+						left: 145px;
+					}
+					@media #{$lg-device} {
+						left: 70px;
+						top: 280px;
+					}
+					@media #{$md-device} {
+						top: 240px;
+					}
+				}
+				&-four {
+					border-radius: 50%;
+					background-color: #532e5b;
+					height: 15px;
+					position: absolute;
+					width: 15px;
+					top: 114px;
+					right: 146px;
+					-webkit-animation: animation-one linear infinite 8s;
+					-moz-animation: animation-one linear infinite 8s;
+					-o-animation: animation-one linear infinite 8s;
+					animation: animation-one linear infinite 8s;
+					@media #{$xxl-device} {
+						right: 245px;
+					}					
+					@media #{$lg-device} {
+						right: 145px;
+						top: 50px;
+					}
+				}
+				&-five {
+					border-radius: 50%;
+					background-color: #eb4435;
+					height: 7px;
+					position: absolute;
+					width: 7px;
+					top: 188px;
+					right: 0;
+					-webkit-animation: animation-two linear infinite 5s;
+					-moz-animation: animation-two linear infinite 5s;
+					-o-animation: animation-two linear infinite 5s;
+					animation: animation-two linear infinite 5s;
+					@media #{$xxl-device} {
+						right: 100px;
+					}				
+					@media #{$lg-device} {
+						top: 160px;
+					}
+				}
+				&-six {
+					border-radius: 50%;
+					background-color: #73dad4;
+					height: 30px;
+					position: absolute;
+					width: 30px;
+					top: 336px;
+					right: 65px;
+					-webkit-animation: animation-one linear infinite 5s;
+					-moz-animation: animation-one linear infinite 5s;
+					-o-animation: animation-one linear infinite 5s;
+					animation: animation-one linear infinite 5s;
+					@media #{$xxl-device} {
+						right: 165px;
+					}				
+					@media #{$lg-device} {
+						top: 260px;
+					}
+					@media #{$md-device} {
+						top: 230px;
+					}
+				}
+				&-seven {
+					border-radius: 50%;
+					background-color: #ffd547;
+					height: 162px;
+					left: -50px;
+					position: absolute;
+					top: 540px;
+					width: 162px;
+					-webkit-animation: animation-two linear infinite 5s;
+					-moz-animation: animation-two linear infinite 5s;
+					-o-animation: animation-two linear infinite 5s;
+					animation: animation-two linear infinite 5s;
+					@media #{$xxl-device} {
+						height: 100px;
+						left: 0;
+						width: 100px;
+					}
+					@media #{$lg-device} {
+						display: none;
+					}
+				}
+				&-eight {
+					border-radius: 50%;
+					background-color: #8453cf;
+					height: 90px;
+					position: absolute;
+					right: -40px;
+					top: 600px;
+					width: 90px;
+					-webkit-animation: animation-two linear infinite 5s;
+					-moz-animation: animation-two linear infinite 5s;
+					-o-animation: animation-two linear infinite 5s;
+					animation: animation-two linear infinite 5s;
+					@media #{$xxl-device} {
+						height: 60px;
+						right: 20px;
+						width: 60px;
+					}
+					@media #{$lg-device} {
+						display: none;
+					}
+				}
+			}
+		}
+
+		.thumb-style {
+			margin-top: 90px;
+			position: relative;
+			text-align: center;
+			z-index: -1;
+			@media #{$md-device} {
+				margin-top: 60px;
+			}
+			@media #{$xxs-device} {
+				margin-top: 50px;
+			}
+			img {
+				border: 6px solid #e4e6e9;
+				border-radius: 50px;
+				@media #{$sm-device} {
+					border-radius: 20px;
+				}
+			}
+		}
+
+		.curve-style {
+			bottom: 0;
+			left: 0;
+			position: absolute;
+			width: 100%;
+			z-index: -2;
+			svg {
+				fill: $white;
+				height: 395px;
+				width: 100%;
+				@media #{$sm-device} {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+.shape-layer {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -2;
+	@media #{$sm-device} {
+		display: none;
+	}
+	.shape {
+		&-one {
+			border-radius: 50%;
+			background-color: #f6825a;
+			height: 25px;
+			position: absolute;
+			width: 25px;
+			top: 110px;
+			left: 46px;
+			-webkit-animation: animation-two linear infinite 5s;
+			-moz-animation: animation-two linear infinite 5s;
+			-o-animation: animation-two linear infinite 5s;
+			animation: animation-two linear infinite 5s;
+		}
+		&-two {
+			border-radius: 50%;
+			background-color: #eb4435;
+			height: 15px;
+			position: absolute;
+			width: 15px;
+			top: 272px;
+			left: -98px;
+			-webkit-animation: animation-one linear infinite 5s;
+			-moz-animation: animation-one linear infinite 5s;
+			-o-animation: animation-one linear infinite 5s;
+			animation: animation-one linear infinite 5s;
+		}
+		&-three {
+			border-radius: 50%;
+			background-color: #532e5b;
+			height: 10px;
+			position: absolute;
+			width: 10px;
+			top: 346px;
+			left: 48px;
+			-webkit-animation: animation-one linear infinite 8s;
+			-moz-animation: animation-one linear infinite 8s;
+			-o-animation: animation-one linear infinite 8s;
+			animation: animation-one linear infinite 8s;
+		}
+		&-four {
+			border-radius: 50%;
+			background-color: #532e5b;
+			height: 15px;
+			position: absolute;
+			width: 15px;
+			top: 114px;
+			right: 146px;
+			-webkit-animation: animation-one linear infinite 8s;
+			-moz-animation: animation-one linear infinite 8s;
+			-o-animation: animation-one linear infinite 8s;
+			animation: animation-one linear infinite 8s;
+		}
+		&-five {
+			border-radius: 50%;
+			background-color: #eb4435;
+			height: 7px;
+			position: absolute;
+			width: 7px;
+			top: 188px;
+			right: 0;
+			-webkit-animation: animation-two linear infinite 5s;
+			-moz-animation: animation-two linear infinite 5s;
+			-o-animation: animation-two linear infinite 5s;
+			animation: animation-two linear infinite 5s;
+		}
+		&-six {
+			border-radius: 50%;
+			background-color: #73dad4;
+			height: 30px;
+			position: absolute;
+			width: 30px;
+			top: 336px;
+			right: 65px;
+			-webkit-animation: animation-one linear infinite 5s;
+			-moz-animation: animation-one linear infinite 5s;
+			-o-animation: animation-one linear infinite 5s;
+			animation: animation-one linear infinite 5s;
+		}
+		&-seven {
+			border-radius: 50%;
+			background-color: #ffd547;
+			height: 162px;
+			left: -50px;
+			position: absolute;
+			top: 540px;
+			width: 162px;
+			-webkit-animation: animation-two linear infinite 5s;
+			-moz-animation: animation-two linear infinite 5s;
+			-o-animation: animation-two linear infinite 5s;
+			animation: animation-two linear infinite 5s;
+			@media #{$md-device} {
+				height: 60px;
+				width: 60px;
+			}
+		}
+		&-eight {
+			border-radius: 50%;
+			background-color: #8453cf;
+			height: 90px;
+			position: absolute;
+			right: -40px;
+			top: 600px;
+			width: 90px;
+			-webkit-animation: animation-two linear infinite 5s;
+			-moz-animation: animation-two linear infinite 5s;
+			-o-animation: animation-two linear infinite 5s;
+			animation: animation-two linear infinite 5s;
+			@media #{$md-device} {
+				height: 60px;
+				width: 60px;
+			}
+		}
+	}
+}
+
